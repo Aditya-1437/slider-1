@@ -13,6 +13,10 @@ next.onclick = () =>{
         itemActive=0;
     }
     showSlider();
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(()=>{
+        next.click();
+    },5000);
 }
 
 prev.onclick = () =>{
@@ -21,7 +25,12 @@ prev.onclick = () =>{
         itemActive = countItem - 1;
     }
     showSlider();
+    clearInterval(refreshInterval);
 }
+
+let refreshInterval = setInterval(()=>{
+    next.click();
+},5000);
 
 function showSlider(){
     let itemActiveOld = document.querySelector('.slider .list .item.active');
@@ -37,5 +46,6 @@ thumbnails.forEach((thumbnail,index)=>{
     thumbnail.addEventListener('click',()=>{
         itemActive=index;
         showSlider();
+        clearInterval(refreshInterval);
     })
 })

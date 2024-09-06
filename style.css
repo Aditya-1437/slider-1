@@ -76,7 +76,10 @@ header .menu{
 
 .slider .list .item .content p:nth-child(1){
     text-transform: uppercase;
-    letter-spacing: 10px;
+    color: #ccef04;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 15px;
     margin: 0;
 }
 
@@ -102,6 +105,7 @@ header .menu{
 .slider .list .item.active p:nth-child(1),
 .slider .list .item.active h2,
 .slider .list .item.active p:nth-child(3){
+    
     transform: translateY(30px);
     filter: blur(20px);
     opacity: 0;
@@ -175,7 +179,10 @@ header .menu{
 }
 
 .thumbnail .item.active{
-    filter: brightness(1.2);
+    filter: brightness(1);
+    color: #8def04;
+    font-size: larger;
+    font-weight: 700;
 }
 
 .thumbnail .item .content{
