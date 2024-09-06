@@ -15,6 +15,14 @@ next.onclick = () =>{
     showSlider();
 }
 
+prev.onclick = () =>{
+    itemActive = itemActive - 1;
+    if(itemActive < 0){
+        itemActive = countItem - 1;
+    }
+    showSlider();
+}
+
 function showSlider(){
     let itemActiveOld = document.querySelector('.slider .list .item.active');
     let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
@@ -24,3 +32,10 @@ function showSlider(){
     items[itemActive].classList.add('active');
     thumbnails[itemActive].classList.add('active');
 }
+
+thumbnails.forEach((thumbnail,index)=>{
+    thumbnail.addEventListener('click',()=>{
+        itemActive=index;
+        showSlider();
+    })
+})
