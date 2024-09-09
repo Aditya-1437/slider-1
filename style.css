@@ -17,6 +17,7 @@ header{
     align-items: center;
     position: relative;
     z-index: 100;
+    border-bottom: 2px solid;
 }
 
 header .logo{
@@ -32,6 +33,21 @@ header .menu{
     justify-content: center;
     gap: 20px;
     font-weight: 500;
+}
+
+header .menu a{
+    text-decoration: none;
+    color: #ae3838;
+
+    &:hover{
+        text-decoration: underline;
+        color: #ff0000;
+    }
+}
+
+header .menu a.active{
+    text-decoration: underline;
+    color: #ff0000;
 }
 
 .slider{
@@ -138,6 +154,12 @@ header .menu{
     font-size: x-large;
     color: #eee;
     transition: .5s;
+}
+
+.arrows .info{
+    width: 70px;
+    font-size: medium;
+    align-items: center;
 }
 
 .arrows button:hover{
